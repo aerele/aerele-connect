@@ -1,0 +1,9 @@
+.input-box input::-moz-placeholder{
+    color: rgba(255, 255, 255, 0.809) !important;
+}
+.input-box input:focus {
+    outline: none;
+  }
+.attach-list ul li:hover svg{
+    color: rgb(0, 55, 255);
+}
