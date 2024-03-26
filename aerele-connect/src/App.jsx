@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import {LoginForm}  from './components/LoginForm/LoginForm';
 import { LoginPage } from './pages/LoginPage/LoginPage'
 import {HomePage} from './pages/HomePage/HomePage'
+import { FrappeProvider } from 'frappe-react-sdk'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -36,12 +37,17 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p> */}
+      <FrappeProvider
+      socketPort= {import.meta.env.VITE_SOCKET_PORT}
+      siteName={import.meta.env.VITE_SITE_NAME}
+      >
       <Router>
         <Routes>
           <Route path='/' element={<LoginPage/>}></Route>
           <Route path='/home' element={<HomePage/>}></Route>
         </Routes>
       </Router>
+      </FrappeProvider>
     </>
   )
 }
