@@ -13,16 +13,16 @@ export const HomePage = () => {
           <Header />
         </div>
         <div className="content d-flex flex-row">
-          <div className="sidebar-box col-3 vh-100 position-sticky start-0 top-0">
+          <div className="sidebar-box col-3 vh-100 position-sticky start-0 top-0 d-sm-block d-md-block d-none">
           {/* <SideBar1/> */}
             <SideBar />
           </div>
-          <div className="mainbar-box col-6">
+          <div className="mainbar-box col-lg-6 col-sm-9 col-md-9">
             <MainBar />
           </div>
-          <div className="rightbar-box col-3 vh-100 position-sticky end-0 top-0">
+          {/* <div className="rightbar-box col-3 vh-100 position-sticky end-0 top-0">
             <RightBar />
-          </div>
+          </div> */}
         </div>
       </div>
     </>
